@@ -1,0 +1,208 @@
+{
+    "site_contact": {
+        "email": "contact@atelierlumiere.com",
+        "phone": "+92 328 3399767",
+        "address": "DHA Phase VIII, Karachi, Pakistan"
+    },
+    "collection_showcase": [
+        {
+            "name": "Tuxedo",
+            "caption": "Classic evening tailoring \u2014 worn for black-tie galas and formal receptions.",
+            "image": "https://images.unsplash.com/photo-1593032465175-481ac7f401a0?q=80&w=700"
+        },
+        {
+            "name": "Sherwani",
+            "caption": "Hand-embroidered ceremonial coat \u2014 worn by grooms for the wedding day and baraat.",
+            "image": "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=700"
+        },
+        {
+            "name": "Shalwar Qameez",
+            "caption": "Relaxed tailored silhouette \u2014 worn for nikah ceremonies and daytime festivities.",
+            "image": "https://images.unsplash.com/photo-1617137968427-85924c800a22?q=80&w=700"
+        },
+        {
+            "name": "Shawl",
+            "caption": "Draped heritage textile \u2014 worn over the shoulder for receptions and winter ceremonies.",
+            "image": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=700"
+        }
+    ],
+    "category_products": {
+        "Tuxedo": [
+            {
+                "name": "Onyx Peak-Lapel Dinner Tuxedo",
+                "price": 950,
+                "image": "https://images.unsplash.com/photo-1593032465175-481ac7f401a0?q=80&w=700"
+            },
+            {
+                "name": "Ivory Shawl-Collar Evening Jacket",
+                "price": 890,
+                "image": "https://images.unsplash.com/photo-1593032465175-481ac7f401a0?q=80&w=700"
+            }
+        ],
+        "Sherwani": [
+            {
+                "name": "Imperial Crimson Wedding Sherwani",
+                "price": 1450,
+                "image": "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=700"
+            },
+            {
+                "name": "Ivory Zardozi Groom's Sherwani",
+                "price": 1600,
+                "image": "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=700"
+            }
+        ],
+        "Shalwar Qameez": [
+            {
+                "name": "Classic Premium Cotton Shalwar Kameez",
+                "price": 620,
+                "image": "https://images.unsplash.com/photo-1617137968427-85924c800a22?q=80&w=700"
+            },
+            {
+                "name": "Charcoal Linen-Blend Shalwar Kameez",
+                "price": 580,
+                "image": "https://images.unsplash.com/photo-1617137968427-85924c800a22?q=80&w=700"
+            }
+        ],
+        "Shawl": [
+            {
+                "name": "Pure Pashmina Heritage Shawl",
+                "price": 340,
+                "image": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=700"
+            },
+            {
+                "name": "Jamawar Silk Ceremonial Shawl",
+                "price": 410,
+                "image": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=700"
+            }
+        ]
+    },
+    "rtw_items": [
+        {
+            "name": "Italian Wool 3-Piece Tuxedo (Ready-to-Wear)",
+            "stock": 15,
+            "price": 850,
+            "image": "https://images.unsplash.com/photo-1593032465175-481ac7f401a0?q=80&w=700"
+        },
+        {
+            "name": "Imperial Raw Silk Sherwani (Ready-to-Wear)",
+            "stock": 8,
+            "price": 1450,
+            "image": "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=700"
+        },
+        {
+            "name": "Classic Premium Cotton Shalwar Kameez (Ready-to-Wear)",
+            "stock": 22,
+            "price": 620,
+            "image": "https://images.unsplash.com/photo-1617137968427-85924c800a22?q=80&w=700"
+        }
+    ],
+    "attire_options": [
+        {
+            "label": "Classic 3-Piece Tailored Tuxedo (Western Formal)",
+            "image": "https://images.unsplash.com/photo-1593032465175-481ac7f401a0?q=80&w=700"
+        },
+        {
+            "label": "Imperial Royal Sherwani (Eastern Groom)",
+            "image": "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=700"
+        },
+        {
+            "label": "Luxury Kurta Shalwar Kameez (Traditional Elegance)",
+            "image": "https://images.unsplash.com/photo-1617137968427-85924c800a22?q=80&w=700"
+        },
+        {
+            "label": "Heritage Pashmina Shawl (Couture Layering)",
+            "image": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=700"
+        }
+    ],
+    "fabric_options": [
+        {
+            "name": "Italian Super 120s Loro Piana Wool",
+            "price": 1200,
+            "image": "https://images.unsplash.com/photo-1636715986446-d58f0f9b3916?q=80&w=700"
+        },
+        {
+            "name": "Premium Handcrafted Banarasi Jamawar",
+            "price": 1500,
+            "image": "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=700"
+        },
+        {
+            "name": "Fine Egyptian Giza Cotton",
+            "price": 650,
+            "image": "https://images.unsplash.com/photo-1617137968427-85924c800a22?q=80&w=700"
+        },
+        {
+            "name": "Authentic Kashmiri Raw Silk",
+            "price": 800,
+            "image": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=700"
+        }
+    ],
+    "measurement_videos": {
+        "Shoulder": "https://www.youtube.com/watch?v=zElyGr6NxM8",
+        "Chest": "https://www.youtube.com/watch?v=SKw52-D3asg",
+        "Waist": "https://www.youtube.com/watch?v=nwBniB9amJY",
+        "Length": "https://www.youtube.com/watch?v=R5XXMQBKxn8",
+        "Collar": "https://www.youtube.com/watch?v=eSaa5_IIqNA"
+    },
+    "submitted_orders": [
+        {
+            "order_id": "ATL-165864",
+            "order_date": "2026-07-14 23:02",
+            "customer_name": "Faizanq Aashiq Hussain",
+            "customer_email": "ndsiu",
+            "customer_phone": "03283399767",
+            "shipping_address": "House no. 841,42 F2 sherpao colony Landhi Karachi\n",
+            "items": [
+                {
+                    "id": 6431033,
+                    "kind": "Bespoke Commission",
+                    "title": "Heritage Pashmina Shawl (Couture Layering)",
+                    "subtitle": "Authentic Kashmiri Raw Silk \u2014 Midnight Velvet",
+                    "price": 800,
+                    "measurements": {
+                        "Shoulder": 18.0,
+                        "Chest": 40.0,
+                        "Waist": 34.0,
+                        "Length": 32.0,
+                        "Collar": 15.5
+                    }
+                }
+            ],
+            "total": 800
+        },
+        {
+            "order_id": "ATL-692462",
+            "order_date": "2026-07-14 23:39",
+            "customer_name": "dsa",
+            "customer_email": "jnk",
+            "customer_phone": "jnk",
+            "shipping_address": "kj",
+            "items": [
+                {
+                    "id": 3113260,
+                    "kind": "Ready-to-Wear",
+                    "title": "Onyx Peak-Lapel Dinner Tuxedo",
+                    "subtitle": "Size: US/UK 36R (Small)",
+                    "price": 950,
+                    "measurements": null
+                },
+                {
+                    "id": 1479413,
+                    "kind": "Ready-to-Wear",
+                    "title": "Ivory Shawl-Collar Evening Jacket",
+                    "subtitle": "Size: US/UK 36R (Small)",
+                    "price": 890,
+                    "measurements": null
+                },
+                {
+                    "id": 4697395,
+                    "kind": "Ready-to-Wear",
+                    "title": "Charcoal Linen-Blend Shalwar Kameez",
+                    "subtitle": "Size: US/UK 36R (Small)",
+                    "price": 580,
+                    "measurements": null
+                }
+            ],
+            "total": 2420
+        }
+    ]
+}
