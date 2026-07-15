@@ -436,7 +436,7 @@ st.markdown("""
     .hero-banner { position: relative; width: 100%; height: 480px; overflow: hidden; margin-bottom: 2rem; background-size: cover; background-position: center; }
     .hero-banner-overlay {
         position: absolute; inset: 0;
-        background: transparent; /* Changed from linear-gradient to transparent */
+        background: transparent !important; /* Force transparent overlay */
         display: flex; flex-direction: column; align-items: center; justify-content: center;
         text-align: center; padding: 2rem;
     }
