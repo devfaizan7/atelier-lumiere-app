@@ -146,20 +146,67 @@ ADMIN_PASSWORD_DEFAULT = "atelier2026"
 ADMIN_GATE_PARAM_VALUE = "system-admin-module"
 
 # ==========================================
-# GLOBAL CSS (BLACK & GOLD THEME)
+# GLOBAL CSS (TIMELESS ELEGANCE THEME — IVORY / CHARCOAL / GOLD)
 # ==========================================
+# Quick snippet to clean up the header space if needed
+st.markdown("""
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    </style>
+    """, unsafe_allow_html=True)
+import streamlit as st
+
+# Ensure this is the very first Streamlit command
+st.set_page_config(layout="wide")
+
+# Inject CSS to completely remove the top gap
+st.markdown("""
+    <style>
+    /* Remove padding from the main content container */
+    .block-container {
+        padding-top: 0rem !important;
+        padding-bottom: 0rem !important;
+        max-width: 100% !important;
+    }
+    
+    /* Hide the default Streamlit header overlay completely */
+    header {
+        visibility: hidden !important;
+        height: 0px !important;
+    }
+    
+    /* Optional: If the gap still persists, reset the main app view margins */
+    .stAppViewMain {
+        margin-top: -60px !important;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
 st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Montserrat:wght@200;300;400;500&display=swap');
 
+    :root {
+        --el-bg: #FAF3E0;
+        --el-bg-card: #F3EAD8;
+        --el-bg-deep: #EFE1BE;
+        --el-border: #E4D6B0;
+        --el-text: #2F2F2F;
+        --el-muted: #6E6658;
+        --el-faint: #8A8374;
+        --el-accent: #D4AF37;
+    }
+
     /* Global Background and Typography */
     .stApp { 
-        background-color: #0B0B0C !important; 
+        background-color: var(--el-bg) !important; 
         font-family: 'Montserrat', sans-serif !important; 
     }
 
     h1, h2, h3, h4, h5, h6, p, span, label, .stMarkdown {
-        color: #F9F9FB !important;
+        color: var(--el-text) !important;
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -184,24 +231,24 @@ st.markdown("""
         font-family: 'Montserrat', sans-serif !important;
         font-size: 0.95rem !important;
         font-weight: 300 !important;
-        color: #E8E8EA !important;
+        color: #36454F !important; /* Changed from #F1F1EC to Charcoal (#36454F) */
         text-align: center;
         letter-spacing: 0.12em !important;
-        text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+        text-shadow: none !important; /* Removed dark shadow so the charcoal text looks clean */
     }
 
     .page-title {
         font-family: 'Cormorant Garamond', serif !important;
         font-size: 3rem !important;
         font-weight: 300 !important;
-        color: #F9F9FB !important;
+        color: var(--el-text) !important;
         text-align: center;
         margin-bottom: 0.3rem;
     }
     .page-subtitle {
         font-family: 'Montserrat', sans-serif !important;
         font-size: 0.9rem !important;
-        color: #8E8E93 !important;
+        color: var(--el-muted) !important;
         text-align: center;
         text-transform: uppercase;
         letter-spacing: 0.2em !important;
@@ -210,26 +257,26 @@ st.markdown("""
 
     .section-header {
         font-size: 2.2rem !important;
-        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        border-bottom: 1px solid rgba(212, 175, 55, 0.35);
         padding-bottom: 0.5rem;
         margin-bottom: 1.5rem;
-        color: #F9F9FB !important;
+        color: var(--el-text) !important;
     }
 
     /* Luxury Cards */
     .luxury-card {
-        background-color: #121214 !important;
-        border: 1px solid rgba(255, 255, 255, 0.06) !important;
+        background-color: var(--el-bg-card) !important;
+        border: 1px solid var(--el-border) !important;
         border-radius: 0px !important;
         padding: 2.5rem !important;
         margin-bottom: 1.5rem !important;
         transition: all 0.4s ease;
     }
     .luxury-card:hover {
-        border-color: rgba(212, 175, 55, 0.4) !important;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+        border-color: rgba(212, 175, 55, 0.55) !important;
+        box-shadow: 0 10px 30px rgba(47,47,47,0.14) !important;
     }
-    .luxury-card h2, .luxury-card h3, .luxury-card h4 { color: #D4AF37 !important; }
+    .luxury-card h2, .luxury-card h3, .luxury-card h4 { color: var(--el-accent) !important; }
 
     /* Fused Cards - Minimizes gap between content and button */
     .fused-card {
@@ -292,18 +339,18 @@ st.markdown("""
     }
 
     .collection-caption {
-        color: #9A9AA1 !important;
+        color: var(--el-muted) !important;
         font-size: 0.76rem;
         font-style: italic;
-        background: #121214;
+        background: var(--el-bg-card);
         margin: 0 !important;
         padding: 4px 10px !important;
         line-height: 1.3 !important;
     }
 
     .badge-gold {
-        color: #D4AF37 !important;
-        border: 1px solid #D4AF37 !important;
+        color: var(--el-accent) !important;
+        border: 1px solid var(--el-accent) !important;
         padding: 0.25rem 0.75rem !important;
         font-size: 0.72rem !important;
         text-transform: uppercase !important;
@@ -312,34 +359,34 @@ st.markdown("""
     }
 
     div[data-baseweb="input"], div[data-baseweb="select"], div[data-baseweb="textarea"] {
-        background-color: #161619 !important;
-        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        background-color: #FFFFFF !important;
+        border: 1px solid var(--el-border) !important;
         border-radius: 0px !important;
     }
-    div[data-baseweb="input"] input { color: #F9F9FB !important; }
+    div[data-baseweb="input"] input { color: var(--el-text) !important; }
 
     .tailor-sheet {
-        background-color: #050506 !important;
-        border: 1px dashed rgba(212, 175, 55, 0.3) !important;
+        background-color: var(--el-bg-deep) !important;
+        border: 1px dashed rgba(212, 175, 55, 0.45) !important;
         padding: 2rem !important;
         font-family: monospace !important;
-        color: #A4A4AB !important;
+        color: var(--el-muted) !important;
         line-height: 1.5;
     }
 
     /* Standard Buttons */
     .stButton > button {
-        background-color: #0B0B0C !important;
-        color: #FFFFFF !important;
-        border: 1px solid rgba(212, 175, 55, 0.45) !important;
+        background-color: #FFFFFF !important;
+        color: var(--el-text) !important;
+        border: 1px solid rgba(212, 175, 55, 0.55) !important;
         border-radius: 0px !important;
         letter-spacing: 0.06em;
         transition: all 0.25s ease !important;
     }
     .stButton > button:hover {
-        background-color: #D4AF37 !important;
-        color: #0B0B0C !important;
-        border-color: #D4AF37 !important;
+        background-color: var(--el-accent) !important;
+        color: var(--el-text) !important;
+        border-color: var(--el-accent) !important;
     }
 
     /* ================================================================
@@ -348,6 +395,7 @@ st.markdown("""
        stable hook, unlike sibling-selector tricks that depend on
        exact DOM nesting.
        ================================================================ */
+    
     .st-key-navbar_row .stButton > button,
     .st-key-navbar_row .stButton > button:hover,
     .st-key-navbar_row .stButton > button:focus,
@@ -361,8 +409,8 @@ st.markdown("""
     }
 
     .st-key-navbar_row .stButton > button {
-        color: #F9F9FB !important;
-        font-size: 1.3rem !important;
+        color: var(--el-text) !important;
+        font-size: 2rem !important;
         padding: 0 !important;
         height: 40px !important;
         display: flex;
@@ -372,18 +420,23 @@ st.markdown("""
         letter-spacing: 0.1em !important;
         transition: color 0.2s ease !important;
     }
+            /* Only targets the first button (typically your brand name) in the navbar */
+    .st-key-navbar_row div[data-testid="column"]:first-child .stButton > button {
+        font-size: 5rem !important;
+        font-weight: 400 !important; /* Optional: gives the brand name slightly more weight */
+    }
 
     .st-key-navbar_row .stButton > button:hover,
     .st-key-navbar_row .stButton > button:focus {
-        color: #D4AF37 !important;
+        color: var(--el-accent) !important;
         background: transparent !important;
     }
 
-    /* Hero Banner - Dark Gradient ensures NO white light */
+    /* Hero Banner - Dark Gradient over photo ensures text stays legible */
     .hero-banner { position: relative; width: 100%; height: 480px; overflow: hidden; margin-bottom: 2rem; background-size: cover; background-position: center; }
     .hero-banner-overlay {
         position: absolute; inset: 0;
-        background: linear-gradient(180deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.65) 100%);
+        background: transparent; /* Changed from linear-gradient to transparent */
         display: flex; flex-direction: column; align-items: center; justify-content: center;
         text-align: center; padding: 2rem;
     }
@@ -398,18 +451,18 @@ st.markdown("""
         background: linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(0,0,0,0.78) 100%);
     }
     .collection-name {
-        position: relative; z-index: 2; color: #F9F9FB !important;
+        position: relative; z-index: 2; color: #FFFFFF !important;
         font-family: 'Cormorant Garamond', serif; font-size: 1.6rem;
         padding: 8px 16px; letter-spacing: 0.05em;
         text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
     }
-    .collection-caption { color: #9A9AA1 !important; font-size: 0.76rem; padding: 6px 10px; font-style: italic; background: #121214; margin: 0; }
+    .collection-caption { color: var(--el-muted) !important; font-size: 0.76rem; padding: 6px 10px; font-style: italic; background: var(--el-bg-card); margin: 0; }
 
     /* Footer */
-    .site-footer { border-top: 1px solid rgba(212,175,55,0.2); margin-top: 3rem; padding-top: 2rem; background-color: transparent; padding-bottom: 2rem; }
-    .footer-brand { color: #D4AF37 !important; font-family: 'Cormorant Garamond', serif; letter-spacing: 0.25em; font-size: 1.1rem; }
-    .footer-line { color: #8E8E93 !important; font-size: 0.82rem; line-height: 1.9; }
-    .footer-rights { color: #55555a !important; font-size: 0.72rem; letter-spacing: 0.1em; text-align: center; margin-top: 1.5rem; }
+    .site-footer { border-top: 1px solid rgba(212,175,55,0.35); margin-top: 3rem; padding-top: 2rem; background-color: transparent; padding-bottom: 2rem; }
+    .footer-brand { color: var(--el-accent) !important; font-family: 'Cormorant Garamond', serif; letter-spacing: 0.25em; font-size: 1.1rem; }
+    .footer-line { color: var(--el-muted) !important; font-size: 0.82rem; line-height: 1.9; }
+    .footer-rights { color: var(--el-faint) !important; font-size: 0.72rem; letter-spacing: 0.1em; text-align: center; margin-top: 1.5rem; }
     </style>
 """, unsafe_allow_html=True)
 
@@ -566,7 +619,7 @@ def render_cart_page():
         with st.container(border=True):
             c1, c2, c3 = st.columns([4, 1, 1])
             with c1:
-                st.markdown(f"**{item['title']}**  \n<span style='color:#8E8E93;font-size:0.85rem;'>{item['subtitle']}</span>", unsafe_allow_html=True)
+                st.markdown(f"**{item['title']}**  \n<span style='color:#6E6658;font-size:0.85rem;'>{item['subtitle']}</span>", unsafe_allow_html=True)
             with c2:
                 st.markdown(f"**${item['price']}**")
             with c3:
@@ -717,7 +770,7 @@ def render_landing():
             st.session_state.selected_category = cat["name"]
             st.session_state.category_selected_product = None
             st.rerun()
-    st.markdown("<hr style='border-color: rgba(255,255,255,0.05); margin:3rem 0;'>", unsafe_allow_html=True)
+    st.markdown("<hr style='border-color: #E4D6B0; margin:3rem 0;'>", unsafe_allow_html=True)
 
     # Ready to Wear and Digital Atelier featured below Collection cards
     col1, col2 = st.columns(2, gap="medium")
@@ -726,7 +779,7 @@ def render_landing():
             <div class="luxury-card fused-card">
                 <span class="badge-gold">Immediate Dispatch</span>
                 <h2 style="font-size: 2rem; margin-top: 0.5rem; margin-bottom: 1rem;">Ready-to-Wear</h2>
-                <p style="color: #8E8E93; font-size: 0.9rem; line-height: 1.6; margin-bottom: 0;">
+                <p style="color: #6E6658; font-size: 0.9rem; line-height: 1.6; margin-bottom: 0;">
                     Curated silhouettes tailored to standard global measurements. Perfect for quick affairs, gala events, and emergency wedding ensembles.
                 </p>
             </div>
@@ -740,7 +793,7 @@ def render_landing():
             <div class="luxury-card fused-card">
                 <span class="badge-gold">Bespoke Fitting</span>
                 <h2 style="font-size: 2rem; margin-top: 0.5rem; margin-bottom: 1rem;">The Digital Atelier</h2>
-                <p style="color: #8E8E93; font-size: 0.9rem; line-height: 1.6; margin-bottom: 0;">
+                <p style="color: #6E6658; font-size: 0.9rem; line-height: 1.6; margin-bottom: 0;">
                     Uncompromising couture. Custom-tailored to your precise anatomical measurements and crafted from our reserve fabric selection.
                 </p>
             </div>
@@ -905,7 +958,7 @@ def render_bespoke():
                 <div class="luxury-card" style="margin-top: 1rem;">
                     <span class="badge-gold">Atelier Textile Analysis</span>
                     <h4 style="margin-top: 0.5rem;">{selected_fabric}</h4>
-                    <p style="color: #8E8E93; font-size: 0.85rem; line-height: 1.6;">
+                    <p style="color: #6E6658; font-size: 0.85rem; line-height: 1.6;">
                         This fabric is renowned for its structure and breathability. Woven utilizing historical techniques in our local reserve loom facilities in Pakistan, the yarn delivers an exquisite drape under event lighting and a heavy, high-trust tactile premium weight.
                     </p>
                 </div>
@@ -942,7 +995,7 @@ def render_bespoke():
             with col_b:
                 st.caption(f"▶ How to measure: {cfg['label']}")
                 st.video(g_db["measurement_videos"].get(cfg["key"], ""))
-            st.markdown("<hr style='border-color: rgba(255,255,255,0.05); margin:0.5rem 0 1.2rem 0;'>", unsafe_allow_html=True)
+            st.markdown("<hr style='border-color: #E4D6B0; margin:0.5rem 0 1.2rem 0;'>", unsafe_allow_html=True)
 
         st.session_state.order_data["measurements"] = measurements
 
@@ -963,7 +1016,7 @@ def render_bespoke():
             <div class="luxury-card">
                 <span class="badge-gold">Master Tailor's Assistant</span>
                 <h4 style="margin-top: 0.5rem; margin-bottom: 1rem;">Need Guided Verification?</h4>
-                <p style="color: #8E8E93; font-size: 0.85rem; line-height: 1.7; margin-bottom: 1.5rem;">
+                <p style="color: #6E6658; font-size: 0.85rem; line-height: 1.7; margin-bottom: 1.5rem;">
                     Our pattern cutters will review your submissions against anatomical ratios. If a sizing anomaly is detected, our head workshop technician will reach out directly prior to cutting.
                 </p>
                 <p style="color: #D4AF37; font-size: 0.8rem; font-weight: 500;">
@@ -1009,7 +1062,7 @@ def render_bespoke():
                     <p style="color: #D4AF37; font-size: 0.95rem; letter-spacing: 0.1em; margin-bottom: 1.5rem;">
                         Rendered in {current_fabric} — Shade: {swatch_color}
                     </p>
-                    <p style="color: #8E8E93; font-size: 0.85rem; max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    <p style="color: #6E6658; font-size: 0.85rem; max-width: 600px; margin: 0 auto; line-height: 1.6;">
                         "Visualizing structural form matching your anatomical metrics. The shoulder line drop is modeled at {st.session_state.order_data['measurements']['Shoulder']}\" with a targeted drape length of {st.session_state.order_data['measurements']['Length']}\". Tailored specifically for immediate confidence."
                     </p>
                 </div>
@@ -1075,10 +1128,10 @@ def render_checkout():
                 total += item["price"]
                 st.markdown(f"""
                     <div class="luxury-card">
-                        <p style="margin: 0; color: #8E8E93;">{item['kind']}</p>
+                        <p style="margin: 0; color: #6E6658;">{item['kind']}</p>
                         <h4 style="margin: 0.2rem 0 0.6rem 0;">{item['title']}</h4>
-                        <p style="margin: 0; color: #8E8E93; font-size:0.85rem;">{item['subtitle']}</p>
-                        <hr style="border-color: rgba(255,255,255,0.05);">
+                        <p style="margin: 0; color: #6E6658; font-size:0.85rem;">{item['subtitle']}</p>
+                        <hr style="border-color: #E4D6B0;">
                         <h4 style="color: #D4AF37 !important; margin:0;">${item['price']} USD</h4>
                     </div>
                 """, unsafe_allow_html=True)
@@ -1086,7 +1139,7 @@ def render_checkout():
 
             contact = st.session_state.checkout_contact
             st.markdown(f"""
-                <p style="color:#8E8E93; font-size:0.85rem;">
+                <p style="color:#6E6658; font-size:0.85rem;">
                 Shipping to <b>{contact.get('name','')}</b><br>
                 {contact.get('address','')}<br>
                 {contact.get('phone','')} · {contact.get('email','')}
@@ -1097,7 +1150,7 @@ def render_checkout():
             st.markdown("### Secure Payment")
             card_num = st.text_input("Card Number", placeholder="•••• •••• •••• ••••", key="chk_card")
             st.markdown("""
-                <p style="font-size: 0.75rem; color: #8E8E93; line-height: 1.4;">
+                <p style="font-size: 0.75rem; color: #6E6658; line-height: 1.4;">
                     🔒 Secure SSL Handshake Payment Processing. Since your custom commission will be hand-embellished in our artisan studio in Pakistan and shipped directly to your location, <b>Cash on Delivery (COD) is strictly unavailable.</b>
                 </p>
             """, unsafe_allow_html=True)
@@ -1207,16 +1260,16 @@ def render_admin():
                     items_html += f"<p style='font-size:0.85rem; margin:0.2rem 0;'><b>{item['kind']}:</b> {item['title']} — {item['subtitle']} (${item['price']})</p>"
                     if item.get("measurements"):
                         m_str = ", ".join(f"{k}: {v}\"" for k, v in item["measurements"].items())
-                        items_html += f"<p style='font-size:0.78rem; color:#8E8E93; margin:0 0 0.6rem 1rem;'>Measurements — {m_str}</p>"
+                        items_html += f"<p style='font-size:0.78rem; color:#6E6658; margin:0 0 0.6rem 1rem;'>Measurements — {m_str}</p>"
                 st.markdown(f"""
                     <div class="luxury-card">
                         <span class="badge-gold">ACTIVE PRODUCTION</span>
                         <h4 style="margin: 0.5rem 0 0.2rem 0;">{order.get('order_id')} — {order.get('customer_name')}</h4>
-                        <p style="font-size: 0.85rem; color: #8E8E93;">
+                        <p style="font-size: 0.85rem; color: #6E6658;">
                             ✉ {order.get('customer_email','—')} &nbsp;·&nbsp; ☎ {order.get('customer_phone','—')}<br>
                             📍 {order.get('shipping_address')}
                         </p>
-                        <hr style="border-color: rgba(255,255,255,0.05);">
+                        <hr style="border-color: #E4D6B0;">
                         {items_html}
                         <p style="color:#D4AF37 !important; margin-top:0.6rem;"><b>Total: ${order.get('total')} USD</b></p>
                     </div>
@@ -1387,7 +1440,7 @@ def render_admin():
                         st.rerun()
                     else:
                         st.error("Please provide both a name and an image URL.")
-            st.markdown("<hr style='border-color: rgba(255,255,255,0.05);'>", unsafe_allow_html=True)
+            st.markdown("<hr style='border-color: #E4D6B0;'>", unsafe_allow_html=True)
             
         if st.button("Save Live Product Changes", key="save_live_prods_btn"):
             save_db(g_db)
